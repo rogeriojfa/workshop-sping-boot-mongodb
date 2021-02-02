@@ -1,5 +1,6 @@
 package com.curso.spring.resources;
 
+import com.curso.spring.domain.Post;
 import com.curso.spring.domain.User;
 import com.curso.spring.services.UserService;
 import com.curso.spring.dto.UserDTO;
@@ -53,4 +54,10 @@ public class UserResource
         obj = usrSrv.update(obj);
         return ResponseEntity.noContent().build();
       }
+
+    @RequestMapping(value="/{id}/posts", method=RequestMethod.GET)
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id){
+        User obj = usrSrv.findById(id);
+        return ResponseEntity.ok().body(obj.getPosts());
+    }
 }
