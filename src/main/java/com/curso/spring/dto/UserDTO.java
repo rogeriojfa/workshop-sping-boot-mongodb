@@ -5,17 +5,19 @@ import com.curso.spring.domain.User;
 import java.io.Serializable;
 import java.util.Optional;
 
+
+
 public class UserDTO implements Serializable {
 
     private String id;
     private String name;
     private String email;
 
-    public UserDTO(Optional<User> obj){
+    public UserDTO(){
 
     }
 
-    public UserDTO(@org.jetbrains.annotations.NotNull User obj){
+    public UserDTO(User obj){
         id = obj.getId();
         name = obj.getName();
         email = obj.getEmail();

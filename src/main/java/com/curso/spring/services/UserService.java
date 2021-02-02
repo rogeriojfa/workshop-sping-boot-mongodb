@@ -1,6 +1,7 @@
 package com.curso.spring.services;
 
 import com.curso.spring.domain.User;
+import com.curso.spring.dto.UserDTO;
 import com.curso.spring.repositoty.UserRepository;
 import com.curso.spring.services.exception.ObjectNotfoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,4 +24,13 @@ public class UserService {
         Optional<User> obj = usrRep.findById(id);
         return obj.orElseThrow(() -> new ObjectNotfoundException("Objeto não encontrado"));
     }
+
+    public User insert(User obj){
+        return usrRep.insert(obj);
+    }
+
+    public User fromDTO(UserDTO objDto){
+        return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
+    }
+
 }
