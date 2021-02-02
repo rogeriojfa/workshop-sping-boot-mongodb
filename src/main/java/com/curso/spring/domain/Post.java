@@ -1,5 +1,6 @@
 package com.curso.spring.domain;
 
+import com.curso.spring.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
@@ -12,13 +13,13 @@ public class Post implements Serializable {
     public Date data;
     public String title;
     public String body;
-    public User author;
+    public AuthorDTO author;
 
     public Post(){
 
     }
 
-    public Post(String id, Date data, String title, String body, User author) {
+    public Post(String id, Date data, String title, String body, AuthorDTO author) {
         this.id = id;
         this.data = data;
         this.title = title;
@@ -57,11 +58,11 @@ public class Post implements Serializable {
     public void setBody(String body) {
         this.body = body;
     }
-    public User getAuthor() {
+    public AuthorDTO getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(AuthorDTO author) {
         this.author = author;
     }
     @Override
