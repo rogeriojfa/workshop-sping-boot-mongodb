@@ -1,9 +1,9 @@
-package com.superacao.pedidos.dto;
+package com.curso.spring.dto;
 
-import com.superacao.pedidos.domain.User;
-import org.springframework.data.annotation.Id;
+import com.curso.spring.domain.User;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 public class UserDTO implements Serializable {
 
@@ -11,11 +11,11 @@ public class UserDTO implements Serializable {
     private String name;
     private String email;
 
-    public UserDTO(){
+    public UserDTO(Optional<User> obj){
 
     }
 
-    public UserDTO(User obj){
+    public UserDTO(@org.jetbrains.annotations.NotNull User obj){
         id = obj.getId();
         name = obj.getName();
         email = obj.getEmail();

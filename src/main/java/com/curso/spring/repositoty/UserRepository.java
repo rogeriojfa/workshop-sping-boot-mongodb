@@ -1,6 +1,6 @@
-package com.superacao.pedidos.repositoty;
+package com.curso.spring.repositoty;
 
-import com.superacao.pedidos.domain.User;
+import com.curso.spring.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

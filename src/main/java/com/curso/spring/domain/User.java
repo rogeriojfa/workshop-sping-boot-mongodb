@@ -1,4 +1,4 @@
-package com.superacao.pedidos.domain;
+package com.curso.spring.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

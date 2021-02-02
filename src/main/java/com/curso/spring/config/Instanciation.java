@@ -1,7 +1,7 @@
-package com.superacao.pedidos.config;
+package com.curso.spring.config;
 
-import com.superacao.pedidos.domain.User;
-import com.superacao.pedidos.repositoty.UserRepository;
+import com.curso.spring.domain.User;
+import com.curso.spring.repositoty.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
